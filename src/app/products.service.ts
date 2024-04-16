@@ -7,6 +7,7 @@ export interface products{
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductsService {
 
   getProducts(): products[] {

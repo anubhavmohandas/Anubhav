@@ -8,13 +8,15 @@ import { TableComponentComponent } from './table-component/table-component.compo
 import { NgFor } from '@angular/common';
 import { ObservablesComponent } from './observables/observables.component';
 import { InjectiblesComponent } from './injectibles/injectibles.component';
+import { ProductsService } from './products.service';
 
 @Component({ //Decorator
   selector: 'demo',
   standalone: true,
   imports: [RouterOutlet,C3Component, ParentComponent, MoviesComponent, PipesComponent, TableComponentComponent, ObservablesComponent, InjectiblesComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  // providers:[ProductsService]
 })
 // Starts the practice
 
