@@ -1,1 +1,21 @@
-<p>observables works!</p>
+<!-- <p>observables works!</p> -->
+
+<!-- Practical 14-->
+<h2>Even Numbers Stream</h2>
+
+<div class="container">
+    <div>
+    <button (click)="startStream()">Start Stream</button>
+    </div>
+
+    <div *ngIf="evenNumbers.length > 0">
+    <h3>Even Numbers:</h3>
+    <ul>
+        <li *ngFor="let number of evenNumbers">{{ number }}</li>
+    </ul>
+    </div>
+
+    <div *ngIf="message">
+    <p>{{ message }}</p>
+    </div>
+</div>
