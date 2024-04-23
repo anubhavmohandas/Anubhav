@@ -1,6 +1,45 @@
-<p>injectibles works!</p>
+<!-- <p>injectibles works!</p>
 
 <pre>Product Values are: </pre>
 <div *ngFor = "let p of products">
     {{p.id}}---{{p.name}}
+</div> -->
+
+<div class="container">
+
+    <!-- add a new city -->
+    <div class="add-new-city">
+    <h3>Add New City</h3>
+    <label>Name: </label>
+    <input [(ngModel)]="newCity.name" placeholder="City Name" required>
+    <br>
+    <label>Pincode: </label>
+    <input [(ngModel)]="newCity.pincode" placeholder="Pincode" required>
+    <br>
+    <label>State: </label>
+    <input [(ngModel)]="newCity.state" placeholder="State" required>
+    <br>
+    <button (click)="addCity()" [disabled]="!newCity.name || !newCity.pincode || !newCity.state">Add City</button>
+    </div>
+
+    <hr>
+
+    <div *ngFor="let city of cities; let i = index">
+        <div class="city-info">
+            <span>{{ city.name }} - {{ city.state }} - {{ city.pincode }}</span>
+            <button (click)="deleteCity(i)">Delete</button>
+        </div>
+    </div>
+
+    <hr>
+        <h3>Major Cities of India</h3>
+
+    <ul>
+    <li *ngFor="let city of cities">
+        <strong>Name:</strong> {{ city.name }} <br>
+        <strong>Pincode:</strong> {{ city.pincode }} <br>
+        <strong>State:</strong> {{ city.state }}
+    </li>
+    </ul>
+    <hr>
 </div>
